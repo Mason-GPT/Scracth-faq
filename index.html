@@ -141,6 +141,30 @@
     @media (min-width:761px) and (max-width:1049px) { .faq-list { grid-template-columns:1fr; } }
     @media (max-width:760px) { .faq-list { grid-template-columns:1fr; } .faq-section { margin-top:32px; } }
     @media (max-width:560px) { .faq-section { padding:17px 14px; } .faq-list details { border-radius:12px; } .faq-list summary { padding-right:30px; } }
+    /* FAQ · centro de ayuda por temas */
+    .page-hero { border-radius:28px; border-top:3px solid var(--accent); background-image:radial-gradient(ellipse at 86% 14%,rgba(85,174,242,.18),transparent 34%),linear-gradient(145deg,#1c242a,#17191b 65%,#211c18); }
+    .page-hero::after { content:"?"; position:absolute; z-index:-1; right:clamp(26px,7vw,110px); top:50%; transform:translateY(-50%); color:#9fd4fa; font-size:clamp(10rem,19vw,16rem); font-weight:900; line-height:1; opacity:.075; pointer-events:none; }
+    .faq-jumps { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; margin-top:24px; }
+    .faq-jumps a { display:flex; align-items:center; gap:9px; min-height:48px; padding:8px 11px; border:1px solid rgba(85,174,242,.22); border-radius:12px; background:rgba(13,17,20,.54); color:var(--ink); font-size:.84rem; font-weight:750; text-decoration:none; transition:transform .18s ease,border-color .18s ease,background .18s ease; }
+    .faq-jumps a:hover { transform:translateY(-2px); border-color:var(--accent); background:rgba(85,174,242,.08); }
+    .faq-jumps a span { display:grid; place-items:center; flex:0 0 27px; width:27px; height:27px; border:1px solid rgba(85,174,242,.3); border-radius:9px; color:#a9d8fa; font-size:1rem; }
+    .faq-section { position:relative; overflow:hidden; border-left:3px solid var(--faq-color,var(--accent)); border-radius:7px 20px 20px 7px; background:linear-gradient(135deg,color-mix(in srgb,var(--faq-color,var(--accent)) 5%,transparent),transparent 48%),var(--panel); }
+    #comunes { --faq-color:#73bdf1; }
+    #fibras { --faq-color:#c48b61; }
+    #tecnicos { --faq-color:#a6d0e9; }
+    .faq-section h2 { display:flex; align-items:center; gap:12px; }
+    .faq-section h2::before { display:grid; place-items:center; flex:0 0 40px; width:40px; height:40px; border:1px solid color-mix(in srgb,var(--faq-color,var(--accent)) 52%,transparent); border-radius:12px; background:color-mix(in srgb,var(--faq-color,var(--accent)) 11%,transparent); color:var(--faq-color,var(--accent)); font-size:1.1rem; }
+    #impresion-3d h2::before { content:"?"; }
+    #comunes h2::before { content:"○"; }
+    #fibras h2::before { content:"▤"; }
+    #tecnicos h2::before { content:"△"; }
+    .faq-list summary { display:flex; align-items:center; gap:10px; min-height:56px; padding-left:2px; }
+    .faq-list summary::before { content:"?"; display:grid; place-items:center; flex:0 0 24px; width:24px; height:24px; border:1px solid rgba(85,174,242,.30); border-radius:50%; color:#9fd4fa; font-size:.8rem; font-weight:850; }
+    .faq-list details[open] summary::before { border-color:var(--faq-color,var(--accent)); color:var(--faq-color,var(--accent)); }
+    .faq-list details[open] { border-color:color-mix(in srgb,var(--faq-color,var(--accent)) 55%,transparent); }
+    .category-note { max-width:72ch; padding:11px 14px; border-left:2px solid var(--faq-color,var(--accent)); border-radius:0 10px 10px 0; background:rgba(255,255,255,.025); }
+    @media (max-width:760px) { .faq-jumps { grid-template-columns:repeat(2,minmax(0,1fr)); } .page-hero::after { right:4px; top:14%; font-size:8rem; } }
+    @media (max-width:560px) { .faq-jumps { gap:7px; } .faq-jumps a { min-height:46px; padding:7px 8px; font-size:.78rem; } .faq-section h2::before { flex-basis:36px; width:36px; height:36px; } .faq-list summary { gap:8px; } }
   </style>
 </head>
 <body>
@@ -175,6 +199,12 @@
       <h1>Preguntas frecuentes</h1>
       <p class="intro">Respuestas sencillas sobre impresión 3D y sobre los 16 materiales que aparecen en el selector de pedidos.</p>
       <p class="notice"><strong>Proyecto escolar:</strong> 3DScracth y sus servicios son ficticios; no es un negocio real. La guía es informativa: la disponibilidad de filamentos no está confirmada y cada impresora requiere revisar las indicaciones del fabricante.</p>
+      <nav class="faq-jumps" aria-label="Ir a un tema">
+        <a href="#impresion-3d"><span aria-hidden="true">?</span>Conceptos</a>
+        <a href="#comunes"><span aria-hidden="true">○</span>Comunes</a>
+        <a href="#fibras"><span aria-hidden="true">▤</span>Con fibras</a>
+        <a href="#tecnicos"><span aria-hidden="true">△</span>Técnicos</a>
+      </nav>
     </header>
 
     <section class="faq-section" id="impresion-3d">
