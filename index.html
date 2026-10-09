@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111214">
+  <meta name="description" content="Preguntas frecuentes escolares sobre impresión 3D y los 16 filamentos del selector de pedidos de 3DScracth.">
+  <title>Preguntas frecuentes — 3DScracth</title>
+  <style>
+    :root { color-scheme:dark; --bg:#111214; --panel:#1c1d20; --ink:#f4f4f3; --muted:#c1c1c2; --accent:#55aef2; --line:#434548; --warm:#a56844; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,Helvetica,sans-serif; line-height:1.6; }
+    a { color:inherit; }
+    .wrap { width:min(1020px,calc(100% - 36px)); margin:0 auto; }
+    header { min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:18px; border-bottom:1px solid var(--line); }
+    .brand { display:inline-flex; align-items:center; gap:11px; color:var(--ink); text-decoration:none; font-weight:800; letter-spacing:.12em; }
+    .brand img { width:42px; height:42px; object-fit:contain; border-radius:50%; }
+    .menu-trigger { min-width:46px; text-align:center; color:var(--ink); text-decoration:none; border:1px solid var(--line); border-radius:10px; padding:8px 13px; font-size:1.1rem; letter-spacing:.1em; }
+    .menu-trigger:hover,.drawer-links a:hover { border-color:var(--accent); color:var(--accent); }
+    .drawer { position:fixed; inset:0; z-index:10; background:#0009; opacity:0; visibility:hidden; transition:.2s; }
+    .drawer:target { opacity:1; visibility:visible; }
+    .drawer-panel { position:absolute; top:0; right:0; width:min(340px,88vw); height:100%; overflow-y:auto; padding:24px 20px; background:#151619; border-left:1px solid var(--line); transform:translateX(100%); transition:transform .2s; }
+    .drawer:target .drawer-panel { transform:translateX(0); }
+    .drawer-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; font-weight:800; letter-spacing:.1em; }
+    .drawer-close { text-decoration:none; font-size:1.5rem; }
+    .drawer-links { display:grid; gap:8px; }
+    .drawer-links a { display:block; border:1px solid var(--line); border-radius:9px; padding:10px 12px; text-decoration:none; }
+    main { padding:38px 0 64px; }
+    .eyebrow { color:var(--accent); font-size:.82rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { max-width:750px; margin:8px 0 14px; font-size:clamp(2.25rem,6vw,4rem); line-height:1.05; }
+    .intro { max-width:760px; color:var(--muted); font-size:1.08rem; }
+    .notice { margin:26px 0 36px; padding:14px 16px; border-left:3px solid var(--warm); background:var(--panel); color:var(--muted); }
+    .faq-section { margin-top:42px; scroll-margin-top:18px; }
+    h2 { margin:0 0 16px; font-size:clamp(1.5rem,4vw,2rem); }
+    .faq-list { display:grid; gap:10px; }
+    details { border:1px solid var(--line); border-radius:12px; background:var(--panel); overflow:hidden; }
+    summary { cursor:pointer; list-style:none; padding:15px 18px; font-weight:700; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:'+'; float:right; color:var(--accent); font-size:1.25rem; line-height:1; }
+    details[open] summary::after { content:'−'; }
+    details p { margin:0; padding:0 18px 17px; color:var(--muted); }
+    details p a { color:var(--accent); }
+    .category-note { margin:-7px 0 14px; color:var(--muted); }
+    footer { padding:22px 0 32px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <header class="wrap" id="inicio">
+    <a class="brand" href="https://mason-gpt.github.io/Scracth/" aria-label="3DScracth, inicio">
+      <img src="./logo-3dscracth.png" alt=""><span>3DSCRACTH</span>
+    </a>
+    <a class="menu-trigger" href="#menu" aria-label="Abrir menú">•••</a>
+  </header>
+  <div class="drawer" id="menu">
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Navegación del sitio">
+      <div class="drawer-head"><span>3DSCRACTH</span><a class="drawer-close" href="#" aria-label="Cerrar menú">×</a></div>
+      <nav class="drawer-links" aria-label="Secciones del sitio">
+        <a href="https://mason-gpt.github.io/Scracth/#inicio">Inicio</a>
+        <a href="https://mason-gpt.github.io/Scracth/#servicios">Servicios</a>
+        <a href="https://mason-gpt.github.io/Scracth/#proceso">Cómo funciona</a>
+        <a href="https://mason-gpt.github.io/Scracth-materiales/">Materiales</a>
+        <a href="https://mason-gpt.github.io/Scracth-galeria/">Galería</a>
+        <a href="https://mason-gpt.github.io/Scracth-pedidos/">Hacer un pedido</a>
+        <a href="#impresion-3d">Preguntas sobre impresión 3D</a>
+        <a href="#comunes">Filamentos comunes</a>
+        <a href="#fibras">Filamentos con fibras</a>
+        <a href="#tecnicos">Filamentos técnicos</a>
+      </nav>
+    </div>
+  </div>
+  <main class="wrap">
+    <p class="eyebrow">Ayuda para el proyecto</p>
+    <h1>Preguntas frecuentes</h1>
+    <p class="intro">Respuestas sencillas sobre impresión 3D y sobre los 16 materiales que aparecen en el selector de pedidos.</p>
+    <p class="notice"><strong>Proyecto escolar:</strong> 3DScracth y sus servicios son ficticios; no es un negocio real. La guía es informativa: la disponibilidad de filamentos no está confirmada y cada impresora requiere revisar las indicaciones del fabricante.</p>
+
+    <section class="faq-section" id="impresion-3d">
+      <h2>Impresión 3D</h2>
+      <div class="faq-list">
+        <details><summary>¿Qué es la impresión 3D?</summary><p>Es una forma de fabricar un objeto a partir de un diseño digital, construyéndolo capa por capa.</p></details>
+        <details><summary>¿Qué significa FDM?</summary><p>FDM es un método que calienta un filamento plástico y lo deposita en capas mediante una boquilla. El selector de pedidos incluye varios materiales para FDM.</p></details>
+        <details><summary>¿Qué es un filamento?</summary><p>Es el material plástico, normalmente enrollado en una bobina, que una impresora FDM funde para formar la pieza.</p></details>
+        <details><summary>¿Todas las impresoras pueden usar los 16 materiales?</summary><p>No. Cada material puede requerir temperaturas, boquillas y condiciones distintas. Los compuestos con fibras pueden desgastar boquillas comunes; materiales técnicos como PEEK o PPS-CF requieren equipos especializados.</p></details>
+        <details><summary>¿Por qué importa la orientación de la pieza?</summary><p>La orientación cambia cómo se forman las capas y puede influir en el acabado y en la resistencia de la pieza. También puede cambiar la necesidad de soportes.</p></details>
+        <details><summary>¿Las fibras de carbono o de vidrio garantizan una pieza más resistente?</summary><p>No siempre. Pueden aportar rigidez o cambiar el acabado, pero el resultado depende de la formulación, el diseño, la orientación y los ajustes. No equivalen automáticamente a mayor resistencia a golpes.</p></details>
+        <details><summary>¿Por qué algunos filamentos necesitan secarse?</summary><p>Algunos materiales, como el nylon PA6, pueden absorber humedad. Seguí las indicaciones de almacenamiento y secado del fabricante del filamento.</p></details>
+        <details><summary>¿Cómo elijo un material?</summary><p>Primero pensá en el uso: calor, exterior, flexibilidad, golpes o rigidez. Después comprobá que la impresora admita ese material y consultá la <a href="https://mason-gpt.github.io/Scracth-materiales/">guía de materiales</a>.</p></details>
+        <details><summary>¿Los filamentos del selector están disponibles para pedir?</summary><p>No está confirmado. Es un proyecto escolar ficticio y la lista sirve como referencia educativa, no como catálogo de existencias.</p></details>
+        <details><summary>¿Cómo adjunto un modelo al pedido?</summary><p>La página prepara un borrador de Email. Si tenés un archivo de modelo, lo adjuntás manualmente al Email antes de enviarlo; el formulario no lo carga ni lo adjunta por vos.</p></details>
+      </div>
+    </section>
+
+    <section class="faq-section" id="comunes">
+      <h2>Filamentos de uso común</h2>
+      <p class="category-note">ABS, PLA, PETG, ASA y TPU (FDM).</p>
+      <div class="faq-list">
+        <details><summary>¿Para qué se suele elegir ABS?</summary><p>Es un plástico rígido, conocido por resistir golpes y calor. Al imprimir puede deformarse, así que requiere condiciones adecuadas y ventilación.</p></details>
+        <details><summary>¿Qué ventaja tiene PLA?</summary><p>Suele ser fácil de imprimir y permite buenos detalles; se usa en maquetas, figuras y prototipos. No es ideal para piezas expuestas a mucho calor.</p></details>
+        <details><summary>¿Cuándo puede servir PETG?</summary><p>Combina resistencia al impacto con algo de flexibilidad, por eso puede servir para objetos de uso cotidiano. El resultado depende del filamento y de los ajustes.</p></details>
+        <details><summary>¿Para qué se elige ASA?</summary><p>Se usa cuando se busca resistencia a la intemperie y a la radiación UV en piezas para exterior. Puede deformarse durante la impresión, de forma parecida al ABS.</p></details>
+        <details><summary>¿Qué tiene de especial TPU (FDM)?</summary><p>Es flexible, parecido a una goma, y puede servir para fundas, protectores o piezas que necesiten doblarse. Suele requerir una impresión más lenta y cuidadosa.</p></details>
+      </div>
+    </section>
+
+    <section class="faq-section" id="fibras">
+      <h2>Filamentos con fibras</h2>
+      <p class="category-note">Las fibras pueden volver abrasivas algunas mezclas: hay que revisar la boquilla y las recomendaciones del fabricante.</p>
+      <div class="faq-list">
+        <details><summary>¿Qué es ABS-GF?</summary><p>Es ABS reforzado con fibra de vidrio, pensado para buscar una pieza más rígida y estable que con ABS común. Las fibras pueden desgastar la boquilla.</p></details>
+        <details><summary>¿Qué aporta PLA-CF?</summary><p>Es PLA mezclado con fibra de carbono. Suele dar una superficie mate y una pieza más rígida, pero no significa que siempre resista mejor los golpes; puede desgastar boquillas comunes.</p></details>
+        <details><summary>¿Qué aporta PETG-CF?</summary><p>Combina PETG con fibra de carbono y se elige cuando se busca más rigidez y una superficie mate. Las fibras pueden desgastar boquillas comunes.</p></details>
+        <details><summary>¿Qué es ASA-CF?</summary><p>Es ASA reforzado con fibra de carbono. Combina una base pensada para exterior con una pieza más rígida; hay que revisar los ajustes y la boquilla recomendados.</p></details>
+        <details><summary>¿Para qué se usa PA6-CF?</summary><p>Es poliamida 6 (nylon 6) con fibra de carbono, elegida cuando se busca rigidez y buen desempeño mecánico. El nylon puede absorber humedad y el compuesto puede desgastar la boquilla.</p></details>
+        <details><summary>¿Qué diferencia hay con PA6-GF?</summary><p>PA6-GF es nylon 6 con fibra de vidrio, que busca aumentar la rigidez. Puede absorber humedad y sus fibras pueden ser abrasivas para la boquilla.</p></details>
+        <details><summary>¿Qué es PPS-CF?</summary><p>Es PPS reforzado con fibra de carbono, un compuesto técnico para aplicaciones que exigen resistencia al calor y a ciertos productos químicos. Necesita condiciones de impresión especializadas.</p></details>
+      </div>
+    </section>
+
+    <section class="faq-section" id="tecnicos">
+      <h2>Filamentos técnicos</h2>
+      <p class="category-note">Para estos materiales es especialmente importante comprobar la ficha técnica y la compatibilidad de la impresora.</p>
+      <div class="faq-list">
+        <details><summary>¿Qué significa Stratasys ABS-ESD7?</summary><p>Es un ABS especial con propiedades disipativas que ayudan a reducir la acumulación de electricidad estática. ESD no significa que sea un aislante eléctrico común: hay que consultar la ficha del producto.</p></details>
+        <details><summary>¿Qué es PC (Polycarbonate)?</summary><p>PC es policarbonato, un plástico tenaz que se elige cuando se busca resistencia al impacto y al calor. Puede ser difícil de imprimir y requiere una máquina compatible.</p></details>
+        <details><summary>¿PC-FR es a prueba de fuego?</summary><p>No. Es una variante de policarbonato formulada para cumplir requisitos de retardancia a la llama según el grado y su certificación. Hay que revisar la certificación exacta; no significa “a prueba de fuego”.</p></details>
+        <details><summary>¿Qué es PEEK?</summary><p>Es un plástico técnico de alto rendimiento para usos con exigencias mecánicas, térmicas y químicas. Su impresión requiere equipos especializados y control preciso.</p></details>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">3DScracth · Proyecto escolar ficticio de impresión 3D.</div></footer>
+</body>
+</html>
